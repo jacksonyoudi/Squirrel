@@ -13,6 +13,10 @@ object SWC {
   def main(args: Array[String]): Unit = {
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
 
+    //    StreamExecutionEnvironment.createLocalEnvironment(1)
+//    StreamExecutionEnvironment.createRemoteEnvironment("vv", 6123, "jar")
+
+
     env.setParallelism(8)
 
     val ds: DataStream[String] = env.socketTextStream("localhost", 9988)
