@@ -122,3 +122,61 @@ task slot是静态的概念， 是指taskmanager具有的并发执行能力
 pipeline 一个slot可以保存作业的整个管道
 
 
+#### 并行子任务的分配
+
+![JQQXli](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/JQQXli.png)
+
+分配策略
+
+
+
+### 程序与数据流(dataflow)
+
+* 三部分 source,transformation sink
+
+
+![iCYav4](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/iCYav4.png)
+
+![ABvtvN](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/ABvtvN.png)
+
+![DAgOnd](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/DAgOnd.png)
+
+
+### 数据传输形式
+
+![uIcQPy](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/uIcQPy.png)
+
+* one-to-one
+* redistributing
+    1. 重分区，调整并行度
+    2. shuffle
+    
+
+### 任务链 operator Chains
+![9MEC7U](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/9MEC7U.png)
+减少网络传输
+
+并行度相同 one-to-one操作
+
+
+
+### 切割任务链
+disableChaing()
+
+
+env.disableChaing() 
+所有的任务链都切断
+
+```scala
+      .startNewChain()
+      // 和前面的共享组分开
+      .slotSharingGroup("a")
+      .disableChaining()
+```
+
+
+
+
+
+
+

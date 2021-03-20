@@ -19,6 +19,10 @@ object SWC {
 
     val dstream: DataStream[(String, Int)] = ds.flatMap(_.split(" "))
       .map((_, 1))
+      .startNewChain()
+      // 和前面的共享组分开
+      .slotSharingGroup("a")
+      .disableChaining()
       .keyBy(_._1)
       //      .setParallelism(1).var
       .sum(1)
