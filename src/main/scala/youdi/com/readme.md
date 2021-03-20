@@ -7,3 +7,12 @@
 6. 低延迟高吞吐
 7. 高可用
 8. 与众多存储系统的连接
+
+
+
+### jobmanager
+    管理调度，
+
+
+### taskmanager
+    worker
