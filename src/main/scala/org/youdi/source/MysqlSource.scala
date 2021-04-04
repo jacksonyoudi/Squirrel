@@ -22,7 +22,7 @@ class MysqlSource extends RichSourceFunction[Student] {
       }
 
       //        ctx.collect()
-      Thread.sleep(1000)
+      Thread.sleep(5000)
 
     }
   }

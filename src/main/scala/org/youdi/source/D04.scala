@@ -15,8 +15,8 @@ object D04 {
 
     val source: MysqlSource = new MysqlSource()
     val ds: DataStream[Student] = env.addSource(source)
-    source.cancel()
-    source.close()
+//    source.cancel()
+//    source.close()
 
     ds.print()
 
