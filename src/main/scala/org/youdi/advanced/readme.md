@@ -73,3 +73,8 @@ watermarker = 当前窗口的最大的事件时间 - 最大允许的延迟时间
 
 
 
+### Allowed Lateness
+
+单独收集迟到严重的数据
+
+

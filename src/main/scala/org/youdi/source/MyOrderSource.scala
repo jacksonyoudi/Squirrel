@@ -14,7 +14,8 @@ class MyOrderSource extends RichParallelSourceFunction[Order] {
       val oid: String = UUID.randomUUID().toString
       val userId: Int = Random.nextInt(10)
       val money: Double = Random.nextDouble()
-      val createTime: Long = System.currentTimeMillis()
+      // 模拟延迟
+      val createTime: Long = System.currentTimeMillis() - Random.nextInt(8) * 1000
       ctx.collect(Order(oid, userId, money, createTime))
 
       Thread.sleep(1000)
