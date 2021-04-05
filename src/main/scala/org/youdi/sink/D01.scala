@@ -13,6 +13,7 @@ object D01 {
     env.setRuntimeMode(RuntimeExecutionMode.AUTOMATIC)
     val ds: DataStream[Long] = env.fromSequence(1, 100)
 
+//    ds.windowAll()
 
     ds.print()
     ds.printToErr()
