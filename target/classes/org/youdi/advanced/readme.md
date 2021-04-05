@@ -112,5 +112,37 @@ flink已经做好了状态的自动管理
 ![jyyPtT](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/jyyPtT.png)
 
 
+### checkpoint
+
+所有状态
+
+
+![0yXWV1](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/0yXWV1.png)
+
+
+
+### 状态后端
+
+存储介质
+
+
+- memoryStateBackend
+- FsStateBackend
+- RocksDBStateBackend (内存+磁盘)
+
+###  状态恢复和重启策略
+
+重启策略分类
+* 默认重启 无限重启
+* 无重启
+* 固定延迟重启
+* 失败率重启
+
+
+1. 如果配置了checkpoint情况下， 默认是无限重启并自动恢复，可以解决小问题， 但是可以隐藏真正的问题
+2. 
+
+
+
 
 
