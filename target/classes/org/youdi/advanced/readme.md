@@ -78,3 +78,39 @@ watermarker = 当前窗口的最大的事件时间 - 最大允许的延迟时间
 单独收集迟到严重的数据
 
 
+
+
+### 状态管理
+
+flink已经做好了状态的自动管理
+在绝大多数情况下都是使用自动管理， 很少手动管理
+
+
+分类：
+
+* 无状态
+   
+   不需要考虑历史
+   map filter flatmap
+   相同的输入，相同的输出
+  
+
+* 有状态
+   
+   需要考虑历史
+   相同的输入，可能得到不同的输出
+   
+场景：
+   去重
+   窗口计算
+   访问历史数据
+   机器学习和深度学习
+
+
+![Ll1ADx](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/Ll1ADx.png)
+
+![jyyPtT](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/jyyPtT.png)
+
+
+
+
