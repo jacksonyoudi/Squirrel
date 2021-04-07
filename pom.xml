@@ -194,7 +194,6 @@ under the License.
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-json</artifactId>
 			<version>1.12.0</version>
-			<scope>test</scope>
 		</dependency>
 
 
