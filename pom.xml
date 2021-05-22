@@ -197,6 +197,16 @@ under the License.
 		</dependency>
 
 
+		<!-- https://mvnrepository.com/artifact/org.apache.flink/flink-state-processor-api -->
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-state-processor-api_2.12</artifactId>
+			<version>1.12.0</version>
+<!--			<scope>provided</scope>-->
+		</dependency>
+
+
+
 
 		<!-- Add logging framework, to produce console output when running in the IDE. -->
 		<!-- These dependencies are excluded from the application JAR by default. -->
