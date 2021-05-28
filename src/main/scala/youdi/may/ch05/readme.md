@@ -88,3 +88,14 @@ object MyPartitioner extends Partitioner[Order] {
   }
 }
 ```
+
+
+
+### Sink
+
+
+自定义sink
+
+sinkfunction
+
+覆盖invoke
