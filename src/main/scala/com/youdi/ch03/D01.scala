@@ -14,13 +14,13 @@ import org.apache.flink.streaming.runtime.streamrecord.StreamElement
 object D01 {
   def main(args: Array[String]): Unit = {
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
-
-    env.setRuntimeMode(RuntimeExecutionMode.AUTOMATIC)
-    Environment
-
-    RuntimeEnvironment
-    SavepointEnvironment
-    StreamElement
+//
+//    env.setRuntimeMode(RuntimeExecutionMode.AUTOMATIC)
+//    Environment
+//
+//    RuntimeEnvironment
+//    SavepointEnvironment
+//    StreamElement
 
     /**
      * LocalStreamEnvironment
