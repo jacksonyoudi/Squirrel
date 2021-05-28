@@ -47,3 +47,16 @@ connect 只能合并两个流，
 
 
 #### split, select , side output
+
+
+### 分区
+
+rebalance重平衡分区
+
+轮询的方式
+
+![n1z66w](https://raw.githubusercontent.com/jacksonyoudi/images/main/uPic/n1z66w.png)
+
+
+
+

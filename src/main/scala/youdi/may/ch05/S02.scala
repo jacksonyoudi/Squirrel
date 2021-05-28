@@ -13,6 +13,7 @@ object S02 {
     //    env.generateSequence(1,100)
     val ds: DataStream[Student] = env.addSource(MySQLSource).setParallelism(1)
     ds.print("mysql")
+    val rebalance: DataStream[Student] = ds.rebalance
 
     env.execute("mysql")
   }
