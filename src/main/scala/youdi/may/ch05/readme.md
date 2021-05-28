@@ -46,4 +46,4 @@ connect 只能合并两个流，
 可以数据类型不同
 
 
-#### split, select , output
+#### split, select , side output

@@ -17,3 +17,33 @@
 4. RichParallelSourceFucntion 并行的sourceFunction kafka就是这个
 
 
+需要实现的接口就是 run 和cancel
+可以重写 open close方法
+
+
+
+
+
+
+### transform 
+1. map 类型转换
+2. flatMap
+
+
+
+3. keyby  按key分组
+4. reduce 
+5. filter
+
+
+#### union
+相同类型的数据流进行合并
+可能合并多个流
+
+
+#### connect
+connect 只能合并两个流， 
+可以数据类型不同
+
+
+#### split, select , side output
