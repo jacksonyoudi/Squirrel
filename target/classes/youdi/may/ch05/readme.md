@@ -60,3 +60,46 @@ rebalance重平衡分区
 
 
 
+
+其他分区：
+global 第一个分区
+broadcast 广播
+forward 一对一
+shuffle  随机分配
+rebalance rr
+rescale 本地
+partitionCustom  自定义 分区器
+
+
+#### 自定义分区器
+
+就是 返回分区id
+
+```scala
+package youdi.may.ch05
+
+import org.apache.flink.api.common.functions.Partitioner
+
+object MyPartitioner extends Partitioner[Order] {
+  
+  // 返回分区id
+  override def partition(key: Order, numPartitions: Int): Int = {
+    0
+  }
+}
+```
+
+
+
+### Sink
+
+
+自定义sink
+
+sinkfunction
+
+覆盖invoke
+
+
+### connecter
+

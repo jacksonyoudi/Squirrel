@@ -9,7 +9,7 @@ import java.lang
 
 object D01 {
   def main(args: Array[String]): Unit = {
-    val env: StreamExecutionEnvironment = StreamExecutionEnvironment
+    val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
     env.setRuntimeMode(RuntimeExecutionMode.AUTOMATIC)
     val ds: DataStreamSource[lang.Long] = env.generateSequence(1, 100)
 

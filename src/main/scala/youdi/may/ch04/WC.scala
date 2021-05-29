@@ -14,7 +14,8 @@ object WC {
 
     val pars: ParameterTool = ParameterTool.fromArgs(args)
 
-    // 参数是 --output xxx --input xxx 这样使用的
+    // 参数是 --output xxx --input xx
+
 
 
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
@@ -29,7 +30,7 @@ object WC {
     result.print("hello")
 
     // 写到hdfs
-    result.writeAsText("hdfs:").setParallelism(1)
+    result.writeAsText("xx.txt").setParallelism(1)
 
     env.execute("wc")
   }

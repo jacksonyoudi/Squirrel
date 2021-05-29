@@ -99,3 +99,12 @@ object MyPartitioner extends Partitioner[Order] {
 sinkfunction
 
 覆盖invoke
+
+
+### connecter
+
+
+
+kafka
+
+配置， 参数 
