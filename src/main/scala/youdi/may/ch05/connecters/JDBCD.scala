@@ -15,22 +15,22 @@ object JDBCD {
 
     val ds: DataStream[Student] = env.fromElements(Student(100, "nihao", 100))
 
-    ds.addSink(
-      JdbcSink.sink(
-        "insert into `student` (`id`,`name`,`age`) values (?,?,?);",
-        (ps, value: Student) => {
-          ps.setInt(1, value.id)
-          ps.setString(2, value.name)
-          ps.setInt(3, value.age)
-        }, new JdbcConnectionOptions
-        .JdbcConnectionOptionsBuilder()
-          .withUrl("jdbc:mysql://localhost:3306/bigdata")
-          .withUsername("root")
-          .withPassword("root")
-          .withDriverName("com.mysql.jdbc.Driver")
-          .build()
-      )
-    )
+//    ds.addSink(
+//      JdbcSink.sink(
+//        "insert into `student` (`id`,`name`,`age`) values (?,?,?);",
+//        (ps, value: Student) => {
+//          ps.setInt(1, value.id)
+//          ps.setString(2, value.name)
+//          ps.setInt(3, value.age)
+//        }, new JdbcConnectionOptions
+//        .JdbcConnectionOptionsBuilder()
+//          .withUrl("jdbc:mysql://localhost:3306/bigdata")
+//          .withUsername("root")
+//          .withPassword("root")
+//          .withDriverName("com.mysql.jdbc.Driver")
+//          .build()
+//      )
+//    )
 
 
     env.execute("")

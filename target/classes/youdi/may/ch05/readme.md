@@ -103,3 +103,8 @@ sinkfunction
 
 ### connecter
 
+
+
+kafka
+
+配置， 参数 
