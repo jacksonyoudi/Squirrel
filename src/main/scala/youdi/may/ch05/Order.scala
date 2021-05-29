@@ -5,4 +5,4 @@ case class Order(
                   userId: Int,
                   money: Double,
                   createTime: Long,
-                )
+                ) extends Serializable
