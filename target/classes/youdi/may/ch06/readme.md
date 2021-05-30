@@ -95,3 +95,73 @@ checkpoint 其实就是将flink的某一时刻，所有的operator的全局快�
 * 失败率重启策略-- 
 
 
+
+默认重启策略
+如果配置了Checkpoint,而没有配置重启策略,那么代码中出现了非致命错误时,程序会无限重启
+
+无重启策略
+设置方式1:
+restart-strategy: none
+
+设置方式2:
+无重启策略也可以在程序中设置
+val env = ExecutionEnvironment.getExecutionEnvironment()
+env.setRestartStrategy(RestartStrategies.noRestart())
+
+重启策略可以配置flink-conf.yaml的下面配置参数来启用，作为默认的重启策略:
+例子:
+restart-strategy: fixed-delay
+restart-strategy.fixed-delay.attempts: 3
+restart-strategy.fixed-delay.delay: 10 s
+
+设置方式2:
+也可以在程序中设置:
+val env = ExecutionEnvironment.getExecutionEnvironment()
+env.setRestartStrategy(RestartStrategies.fixedDelayRestart(
+3, // 最多重启3次数
+Time.of(10, TimeUnit.SECONDS) // 重启时间间隔
+))
+上面的设置表示:如果job失败,重启3次, 每次间隔10
+
+设置方式1:
+失败率重启策略可以在flink-conf.yaml中设置下面的配置参数来启用:
+例子:
+restart-strategy:failure-rate
+restart-strategy.failure-rate.max-failures-per-interval: 3
+restart-strategy.failure-rate.failure-rate-interval: 5 min
+restart-strategy.failure-rate.delay: 10 s
+
+设置方式2:
+失败率重启策略也可以在程序中设置:
+val env = ExecutionEnvironment.getExecutionEnvironment()
+env.setRestartStrategy(RestartStrategies.failureRateRestart(
+3, // 每个测量时间间隔最大失败次数
+Time.of(5, TimeUnit.MINUTES), //失败率测量的时间间隔
+Time.of(10, TimeUnit.SECONDS) // 两次连续重启的时间间隔
+))
+上面的设置表示:如果5分钟内job失败不超过三次,自动重启, 每次间隔10s (如果5分钟内程序失败超过3次,则程序退出)
+
+
+
+### 手动重启
+
+
+
+
+### savepoint 
+手动重启
+
+```shell
+/export/server/flink/bin/flink savepoint 702b872ef80f08854c946a544f2ee1a5 hdfs://node1:8020/flink-checkpoint/savepoint/
+
+/export/server/flink/bin/flink cancel 702b872ef80f08854c946a544f2ee1a5
+
+
+/export/server/flink/bin/flink run 
+-s hdfs://node1:8020/flink-checkpoint/savepoint/savepoint-702b87-0a11b997fa70
+ --class cn.itcast.checkpoint.CheckpointDemo01 /root/ckp.jar 
+
+```
+
+
+
