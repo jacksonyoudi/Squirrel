@@ -30,7 +30,7 @@ object D01 {
           // 状态初始化
           override def open(parameters: Configuration) = {
             // 创建状态描述器
-            val desc = new ValueStateDescriptor("maxMoney", Double.getClass)
+            val desc = new ValueStateDescriptor("maxMoney", createTypeInformation[Double])
             maxState = getRuntimeContext.getState(desc)
 
 

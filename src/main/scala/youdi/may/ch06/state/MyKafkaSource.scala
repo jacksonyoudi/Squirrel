@@ -24,20 +24,21 @@ object MyKafkaSource extends RichParallelSourceFunction with CheckpointedFunctio
     offsetState = context.getOperatorStateStore.getListState(desc)
   }
 
-  override def run(ctx: SourceFunction.SourceContext[String]): Unit = {
-    val it: util.Iterator[Long] = offsetState.get.iterator()
-    if (it.hasNext) {
-      offset = it.next()
-    }
 
-    while (flag) {
-      offset += 1
-      val subtask: Int = getRuntimeContext.getIndexOfThisSubtask
-      ctx.collect("subtask" + subtask + " offset:" + offset)
-    }
+  override def run(ctx: SourceFunction.SourceContext[Nothing]): Unit = ???
 
 
-  }
+//  override def run(ctx: SourceFunction.SourceContext[String]): Unit = {
+//    val it: util.Iterator[Long] = offsetState.get.iterator()
+//    if (it.hasNext) {
+//      offset = it.next()
+//    }
+//
+//    while (flag) {
+//      offset += 1
+//      val subtask: Int = getRuntimeContext.getIndexOfThisSubtask
+//      ctx.collect("subtask" + subtask + " offset:" + offset)
+//    }
 
   override def cancel(): Unit = {
     flag = false
