@@ -22,3 +22,29 @@ watermark是用来触发窗口计算的
 允许迟到，侧流输出机制
 
 用来单独收集数据延迟严重的数据
+
+
+
+### state
+
+flink中状态是自动管理
+
+
+
+manager state
+1. flnk runtime 管理
+2. 自动存储，自动恢复
+3. 内存管理上有优化
+
+- keystate
+- operator state
+
+
+
+raw state
+1. 用户自己管理
+2. 需要自己序列化
+
+
+
+
