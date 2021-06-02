@@ -8,7 +8,7 @@ case class MyEvent(
 
                   ) {
   def add(other: MyEvent): MyEvent = {
-    this.amount += other.amount
+//    this.amount = other.amount
     this
   }
 }
