@@ -110,4 +110,8 @@ JobGraph到ExecutionGraph的转换在JobMaster中完成，转换过程中的重�
    与IntermediateDataSet对应的IntermediateResul
    t和IntermediateResultPartition等，并行将通过这些类实现。
    
-3. 
+
+
+### 8.5 执行图 
+作业中所有的并行执行的task信息， task之间的关联关系，数据流转关系
+
