@@ -7,8 +7,7 @@ object D02 {
   def main(args: Array[String]): Unit = {
 
 
-    val settings: EnvironmentSettings = EnvironmentSettings.newInstance.inStreamingMode.build
-    StreamTableEnvironment.create(settings)
-  
+//    val settings: EnvironmentSettings = EnvironmentSettings.newInstance.inStreamingMode.build
+//    StreamTableEnvironment.create(settings)
   }
 }
