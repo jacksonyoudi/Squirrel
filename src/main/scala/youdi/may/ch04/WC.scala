@@ -1,8 +1,18 @@
 package youdi.may.ch04
 
 import org.apache.flink.api.common.RuntimeExecutionMode
+import org.apache.flink.api.common.typeinfo.TypeInformation
 import org.apache.flink.api.java.utils.ParameterTool
+import org.apache.flink.streaming.api.functions.KeyedProcessFunction
+import org.apache.flink.streaming.api.functions.source.SourceFunction
 import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment, createTypeInformation}
+import org.apache.flink.streaming.api.windowing.triggers.CountTrigger
+import org.apache.flink.streaming.runtime.partitioner.ShufflePartitioner
+import org.apache.flink.streaming.runtime.streamrecord.LatencyMarker
+import org.apache.flink.table.runtime.operators.window.triggers.ProcessingTimeTriggers.AfterEndOfWindow
+import org.apache.flink.table.types.logical.LogicalType
+import org.apache.flink.util.AbstractID
+
 
 
 /**
@@ -15,6 +25,7 @@ object WC {
     val pars: ParameterTool = ParameterTool.fromArgs(args)
 
     // 参数是 --output xxx --input xx
+
 
 
 
