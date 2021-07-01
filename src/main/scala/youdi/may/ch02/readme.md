@@ -72,3 +72,20 @@ high-availability.storageDir: hdfs:///flink/ha/
 
 
 
+
+### flink 实际应用场景
+
+1. 实时大屏
+2. 实时采集 实时计算
+3. 实时仓库， ETL， data pipeline
+
+
+
+state manager
+表达能力
+
+生态完善
+批流一体
+
+
+
