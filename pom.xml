@@ -203,6 +203,15 @@ under the License.
 		</dependency>
 
 
+		<!-- https://mvnrepository.com/artifact/org.apache.flink/flink-cep-scala -->
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-cep-scala_2.12</artifactId>
+			<version>1.12.0</version>
+		</dependency>
+
+
+
 
 		<dependency>
 			<groupId>org.apache.flink</groupId>
