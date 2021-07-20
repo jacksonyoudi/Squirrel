@@ -2,6 +2,7 @@ package youdi.com.datasource
 
 import org.apache.flink.streaming.api.scala._
 import org.apache.flink
+import org.apache.flink.streaming.api.datastream.DataStream
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer
 
 import java.util.Properties
