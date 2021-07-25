@@ -2,7 +2,7 @@ package youdi.com.datasource
 
 import org.apache.flink.streaming.api.scala._
 import org.apache.flink
-import org.apache.flink.streaming.api.datastream.DataStream
+import org.apache.flink.streaming.api.datastream.{DataStream, SingleOutputStreamOperator}
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer
 
 import java.util.Properties
@@ -28,7 +28,8 @@ object D01 {
     // 读取文件
     val textStream: DataStream[String] = env.readTextFile("hello.txt")
 
-
+    val value: SingleOutputStreamOperator[String] = textStream.map(_.concat(" "))
+    
     // 从kafka中读取数据
     val pro: Properties = new Properties()
     pro.setProperty("bootstrap.servers", "localhost:9092")
