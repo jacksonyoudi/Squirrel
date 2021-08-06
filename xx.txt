@@ -1,2 +1,0 @@
-(china,2)
-(hello,2)
