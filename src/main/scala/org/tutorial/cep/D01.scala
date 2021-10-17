@@ -28,13 +28,13 @@ object D01 {
       .followedBy("end").where(_.name == "end")
 
     val patternStream: PatternStream[Event] = CEP.pattern(input, pattern)
-    patternStream.process(
-      new PatternProcessFunction[Event, Alert] {
-        override def processMatch(map: util.Map[String, util.List[Event]], context: PatternProcessFunction.Context, collector: Collector[Any]) = {
-          collector.collect(Alert(pattern))
-        }
-      }
-    )
+//    patternStream.process(
+//      new PatternProcessFunction[Event, Alert] {
+//        override def processMatch(map: util.Map[String, util.List[Event]], context: PatternProcessFunction.Context, collector: Collector[Any]) = {
+//          collector.collect(Alert(pattern))
+//        }
+//      }
+//    )
 
 
     env.execute

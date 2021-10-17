@@ -16,8 +16,6 @@ object S01 {
 
     val ds: DataStream[Order] = env.addSource(new OrderSource).setParallelism(2)
     ds.print("order")
-    StreamOperator
-
 
     env.execute("")
   }

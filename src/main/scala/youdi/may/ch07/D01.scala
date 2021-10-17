@@ -17,10 +17,6 @@ object D01 {
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
     env.setRuntimeMode(RuntimeExecutionMode.AUTOMATIC)
 
-    new StateTtlConfig
-
-    new PipelineExecutor {}
-
     // setting使用 blink
     val settings: EnvironmentSettings = EnvironmentSettings.newInstance.useBlinkPlanner.inStreamingMode.build
 
