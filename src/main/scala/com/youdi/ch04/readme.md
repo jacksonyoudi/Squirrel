@@ -53,4 +53,5 @@ Source Function可以直接为数据元素分配时间戳，同时也会向下�
 需要注意的是:如果一个timestamp分配器被使用的话，由源提供的任何Timestamp和Watermark都会被重写。
 
 2. DataStream API中生成Watermark
+
 AssignerWithWatermark
