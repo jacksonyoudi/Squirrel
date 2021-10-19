@@ -108,3 +108,50 @@ release
 
 ### Semaphore
 
+
+
+
+```json
+{
+"shopid": 601295157,
+"country": "ID",
+"shop_pv": 788389,
+"pv": 645275,
+"shop_uv": 116712,
+"uv": 116156,
+"add_to_cart_units": 80821,
+"add_to_cart_buyers": 37603,
+"items_visited": 187,
+"bounce_visitors": 20879,
+"likes": 6431,
+"add_to_cart_or_liked_visitors": 40213,
+"placed_sales": 4412189285.98,
+"confirmed_sales": 4148994611.98,
+"paid_sales": 4148994611.98,
+"placed_orders": 16280,
+"confirmed_orders": 15448,
+"paid_orders": 15448,
+"placed_buyers": 14199,
+"confirmed_buyers": 13857,
+"paid_buyers": 13857,
+"placed_units": 23659,
+"confirmed_units": 22440,
+"paid_units": 22440,
+"items_paid": 136,
+"items_confirmed": 136,
+"repeated_paid_buyers": 1327,
+"repeated_placed_buyers": 1709,
+"repeated_confirmed_buyers": 1327,
+"existing_paid_buyers": 2909,
+"existing_placed_buyers": 2990,
+"existing_confirmed_buyers": 2909,
+"dt": "2021-06-30",
+"settlement_data":'[{"placed_settlement_sales":1000,"placed_none_settlement_sales":4412.18928598E9,"paid_settlement_sales":8000,"paid_none_settlement_sales":4148.99461198E9,"confirmed_settlement_sales":600,"confirmed_none_settlement_sales":4.14899461198E9,"currency":2}]'
+}
+
+
+
+```
+
+
+
