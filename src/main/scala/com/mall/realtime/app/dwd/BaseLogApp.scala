@@ -37,7 +37,7 @@ object BaseLogApp {
 
     keyedStream.map(
       new RichMapFunction[JSONObject, JSONObject]() {
-        
+
       }
     )
 
