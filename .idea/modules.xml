@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Squirrel.iml" filepath="$PROJECT_DIR$/.idea/Squirrel.iml" />
+<<<<<<< HEAD
+=======
+      <module fileurl="file://$PROJECT_DIR$/Squirrel (1).iml" filepath="$PROJECT_DIR$/Squirrel (1).iml" />
+>>>>>>> c10a6c3edf2b0945963855a4fcd4080ad3a4b86e
     </modules>
   </component>
 </project>

@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+<<<<<<< HEAD
     <bytecodeTargetLevel>
       <module name="Squirrel" target="1.8" />
+=======
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Squirrel" />
+        <module name="Squirrel (1)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Squirrel" target="1.8" />
+      <module name="Squirrel (1)" target="1.5" />
+>>>>>>> c10a6c3edf2b0945963855a4fcd4080ad3a4b86e
     </bytecodeTargetLevel>
   </component>
 </project>
